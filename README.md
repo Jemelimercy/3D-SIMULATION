@@ -21,3 +21,22 @@ An interactive 3D simulation built with **Python**, **Pygame**, and **MediaPipe*
    ```bash
    git clone [https://github.com/Jemelimercy/3D-SIMULATION.git](https://github.com/Jemelimercy/3D-SIMULATION.git)
    cd 3D-SIMULATION
+
+   Install Dependencies:
+   pip install pygame mediapipe opencv-python numpy
+
+   Run Simulation:
+python cube_sim.py
+
+🎮 Controls
+W Key: Toggle between Wireframe and Solid Face mode.
+
+Q Key: Quit the application.
+
+Hand: Move and rotate your hand to interact with the cube
+
+  📝 Mathematical LogicThe projection uses a focal length formula:
+  $$f(z) = \frac{\text{focal\_length}}{z + z\_offset}$$
+  The scaling is handled via numpy.interp to map hand distance $(60, 220)$ to cube scale $(300, 50)$.
+  
+  Developed by Jemeli Mercy
